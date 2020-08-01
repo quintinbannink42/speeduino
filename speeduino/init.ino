@@ -1752,6 +1752,50 @@ void setPinMapping(byte boardID)
       pinResetControl = 43; //Reset control output
       break;
 
+    case 35:
+        #ifndef SMALL_FLASH_MODE //No support for bluepill here anyway
+      //Pin mappings as per the Supreme Core
+      pinInjector1 = 8; //Output pin injector 1 is on 8
+      pinInjector2 = 7; //Output pin injector 2 is on 7
+      pinInjector3 = 6; //Output pin injector 3 is on 6 
+      pinInjector4 = 5; //Output pin injector 4 is on 5
+      pinInjector5 = 45; //Output pin injector 5 is on PLACEHOLDER value for now
+      pinCoil1 = 35; //Pin for coil 1
+      pinCoil2 = 36; //Pin for coil 2
+      pinCoil3 = 33; //Pin for coil 3
+      pinCoil4 = 34; //Pin for coil 4
+      pinCoil5 = 44; //Pin for coil 5 PLACEHOLDER value for now
+      pinTrigger = 19; //The CAS pin
+      pinTrigger2 = 18; //The Cam Sensor pin
+      pinFlex = 20; // Flex sensor
+      pinTPS = A3; //TPS input pin
+      pinMAP = A7; //MAP sensor pin21
+      pinBaro = A0; //Baro sensor pin
+      pinIAT = A5; //IAT sensor pin
+      pinCLT = A4; //CLS sensor pin
+      pinO2 = A1; //O2 Sensor pin
+      pinBat = A2; //Battery reference voltage pin
+      pinSpareTemp1 = A8; //spare Analog input 1
+      pinSpareTemp2 = A9; //spare Analog input 2
+      pinLaunch = 37; //Can be overwritten below
+      pinDisplayReset = 48; // OLED reset pin PLACEHOLDER value for now
+      pinTachOut = 27;//22 //Tacho output pin
+      pinIdle1 = 9; //Single wire idle control
+      pinSpareLOut1 = 25; // GPI1
+      pinSpareLOut2 = 29; // GPI2
+      pinSpareOut1 = 10; //Antilag
+      pinFuelPump = 26;//Fuel pump output
+      pinVVT_1 = 11; //Default VVT output 
+      pinStepperDir = 32; //Direction pin  for DRV8825 driver
+      pinStepperStep = 31; //Step pin for DRV8825 driver
+      pinStepperEnable = 30; //Enable pin for DRV8825 driver
+      pinBoost = 12; //Boost control
+      pinFan = 28; //Pin for the fan output
+      pinResetControl = 46; //Reset control output PLACEHOLDER value for now
+      pinVSS = 21; //Wheel Speed input
+    #endif
+      break;
+
     case 40:
       //Pin mappings as per the NO2C shield
       pinInjector1 = 8; //Output pin injector 1 is on
